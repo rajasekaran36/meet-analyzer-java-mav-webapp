@@ -2,6 +2,7 @@
 /mnt/g/meet-analizer-protos/meet-analyzer-java-mav-webapp/src/main/java/io/github/rajasekarans/meettool/service/MeetAnalyzerService.java
 /mnt/g/meet-analizer-protos/meet-analyzer-java-mav-webapp/src/main/java/io/github/rajasekarans/meettool/service/StudentMapService.java
 /mnt/g/meet-analizer-protos/meet-analyzer-java-mav-webapp/src/main/java/io/github/rajasekarans/meettool/service/ReportRecordService.java
+/mnt/g/meet-analizer-protos/meet-analyzer-java-mav-webapp/src/main/java/api/Sample.java
 /mnt/g/meet-analizer-protos/meet-analyzer-java-mav-webapp/src/main/java/io/github/rajasekarans/meettool/model/Meeting.java
 /mnt/g/meet-analizer-protos/meet-analyzer-java-mav-webapp/src/main/java/io/github/rajasekarans/meettool/model/StudentMap.java
 /mnt/g/meet-analizer-protos/meet-analyzer-java-mav-webapp/src/main/java/io/github/rajasekarans/meettool/utils/MeetUtils.java
@@ -12,4 +13,5 @@
 /mnt/g/meet-analizer-protos/meet-analyzer-java-mav-webapp/src/main/java/io/github/rajasekarans/meettool/service/MeetingService.java
 /mnt/g/meet-analizer-protos/meet-analyzer-java-mav-webapp/src/main/java/io/github/rajasekarans/meettool/model/ReportRecord.java
 /mnt/g/meet-analizer-protos/meet-analyzer-java-mav-webapp/src/main/java/servlets/Analize.java
+/mnt/g/meet-analizer-protos/meet-analyzer-java-mav-webapp/src/main/java/api/APIGet.java
 /mnt/g/meet-analizer-protos/meet-analyzer-java-mav-webapp/src/main/java/servlets/Upload.java
