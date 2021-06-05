@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="setup()">
+    <h1>Please Upload Meet File !!!!</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td>Class:</td>
+                <td><input type="text" name="classname" value="ITE"></td>
+            </tr>
+            <tr>
+                <td>Date:</td>
+                <td><input type="date" name="date"></td>
+            </tr>
+            <tr>
+                <td>Time:</td>
+            </tr>
+            <tr>
+                <td>HH:</td>
+                <td>
+                    <select name="hour">
+                    </select>
+                </td>
+                <td>MM:</td>
+                <td>
+                    <select name="minute">
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>File Upload</td>
+                <td><input type="file" name="upload"/></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="SUBMIT"></td>
+            </tr>
+        </table>
+    </form>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

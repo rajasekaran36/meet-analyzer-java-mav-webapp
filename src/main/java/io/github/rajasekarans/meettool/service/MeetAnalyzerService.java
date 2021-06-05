@@ -18,4 +18,8 @@ public class MeetAnalyzerService {
     public boolean writeToCSVFile(String reportFilePath){
         return reportService.writeToCSVFile(reportFilePath);
     }
+
+    public String reportString(){
+        return reportService.reportString();
+    }
 }
