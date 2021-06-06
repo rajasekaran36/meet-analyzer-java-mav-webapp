@@ -35,14 +35,14 @@ public class StudentMapService {
     }
 
     public StudentMapService getService(String filePath){
-        try {
+        /* try {
             List<String> lines  = Files.readAllLines(Path.of(filePath),StandardCharsets.UTF_8);
             lines.stream().forEach(line->addStudentMap(line));
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        } */
         return this;
-    }
+    } 
 
     public StudentMapService getServiceUsingMapString(String mapString){
 

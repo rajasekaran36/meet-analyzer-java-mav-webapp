@@ -1,5 +1,6 @@
-0:0:0:0:0:0:0:1 - - [06/Jun/2021:21:12:32 +0530] "GET / HTTP/1.1" 304 - http-bio-8080-exec-1 74
-0:0:0:0:0:0:0:1 - - [06/Jun/2021:21:12:32 +0530] "GET /css/table.css HTTP/1.1" 304 - http-bio-8080-exec-2 36
-0:0:0:0:0:0:0:1 - - [06/Jun/2021:21:12:32 +0530] "GET /js/index.js HTTP/1.1" 200 3573 http-bio-8080-exec-3 38
-0:0:0:0:0:0:0:1 - - [06/Jun/2021:21:12:32 +0530] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8080-exec-5 5
-0:0:0:0:0:0:0:1 - - [06/Jun/2021:21:12:58 +0530] "POST /dummy HTTP/1.1" 200 15249 http-bio-8080-exec-4 365
+127.0.0.1 - - [06/Jun/2021:21:29:32 +0530] "GET / HTTP/1.1" 200 1709 http-bio-8080-exec-2 33
+127.0.0.1 - - [06/Jun/2021:21:29:32 +0530] "GET /css/table.css HTTP/1.1" 200 855 http-bio-8080-exec-3 3
+127.0.0.1 - - [06/Jun/2021:21:29:32 +0530] "GET /js/index.js HTTP/1.1" 200 3573 http-bio-8080-exec-5 4
+127.0.0.1 - - [06/Jun/2021:21:29:32 +0530] "GET /css/head.css HTTP/1.1" 200 430 http-bio-8080-exec-4 5
+127.0.0.1 - - [06/Jun/2021:21:29:32 +0530] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8080-exec-7 3
+127.0.0.1 - - [06/Jun/2021:21:29:42 +0530] "POST /dummy HTTP/1.1" 200 15249 http-bio-8080-exec-9 400
