@@ -116,3 +116,7 @@ function displayTable(tablejson) {
   table.appendChild(tableBody);
   document.body.appendChild(table);
 }
+
+function process(){
+  
+}
