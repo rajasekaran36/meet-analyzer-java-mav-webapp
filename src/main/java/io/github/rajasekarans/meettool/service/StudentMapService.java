@@ -44,6 +44,12 @@ public class StudentMapService {
         return this;
     }
 
+    public StudentMapService getServiceUsingMapString(String mapString){
+        List<String> lines = Arrays.asList(mapString.split("\n"));
+        lines.stream().forEach(line->addStudentMap(line));
+        return null;
+    }
+
     @Override
     public String toString() {
         return "{" +

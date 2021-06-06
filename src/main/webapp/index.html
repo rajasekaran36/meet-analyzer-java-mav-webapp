@@ -31,19 +31,24 @@
                 </td>
                 <td>MM:</td>
                 <td>
-                    <select name="minute">
+                    <select name="miniute">
                     </select>
                 </td>
             </tr>
             <tr>
-                <td>File Upload</td>
-                <td><input type="file" name="upload"/></td>
+                <td>File Upload & Process</td>
+                <td><input type="file" name="upload" onchange="readText(event)"/></td>
             </tr>
             <tr>
-                <td><input type="submit" value="SUBMIT"></td>
+                <!-- <td><input type="submit" value="SUBMIT"></td> -->
             </tr>
         </table>
     </form>
+
+    <br>
+    <br>
+    <h3>Report</h3>
+    <p id = "report"></p>
     <script src="js/index.js"></script>
 </body>
 

@@ -56,4 +56,36 @@ public class MeetingService {
         meeting.setParticipations(participations);
         return this;
     }
+
+    public MeetingService getServiceByMeetString(String meetString){
+        
+        List<String> lines = MeetUtils.cleanupString(meetString);
+        
+        // Setting up session details
+         meeting.setClassName(lines.get(0).split(",")[1]);
+         String[] session = lines.get(1).split(",");
+         meeting.setDate(session[1]);
+         meeting.setTime(session[3]);
+         meeting.setMeedID(session[5]);
+ 
+         // Loading Participation Details
+         List<Participation> participations = new ArrayList<>(); 
+         for (String line : lines.subList(4, lines.size() - 4)) {
+             List<String> data = Arrays.asList(line.split(","));
+             
+             //participated in meeting
+             if(data.size()>1){
+                 Participation participation = new Participation();
+                 participation.setGmeetName(data.get(0));
+                 participation.setArrivalTime(data.get(4));
+                 participation.setLastSeen(data.get(5));
+                 participation.setNoOfChecks(Integer.parseInt(data.get(6)));
+                 participation.setJoined(Integer.parseInt(data.get(7)));
+                 participation.setDetails(data.subList(8, data.size()));
+                 participations.add(participation);
+             }
+         }
+         meeting.setParticipations(participations);
+         return this;
+    }
 }
