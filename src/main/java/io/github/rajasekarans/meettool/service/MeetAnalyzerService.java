@@ -8,13 +8,13 @@ public class MeetAnalyzerService {
     private ReportService reportService;
 
     public MeetAnalyzerService(){}
-    public MeetAnalyzerService(String studentMappingFilePath, String meetFilePath){
+    /* public MeetAnalyzerService(String studentMappingFilePath, String meetFilePath){
         this.studentMapService = new StudentMapService().getService(studentMappingFilePath);
         this.meetingService = new MeetingService().getService(meetFilePath);
         this.reportRecordService = new ReportRecordService(studentMapService, meetingService);
         this.reportService = new ReportService(reportRecordService);
         
-    }
+    } */
 
     public static MeetAnalyzerService getServiceByMeetString(String studentMappingFilePath,String meetString){
         MeetAnalyzerService newService = new MeetAnalyzerService();

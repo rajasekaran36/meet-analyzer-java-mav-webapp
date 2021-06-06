@@ -65,8 +65,9 @@ public class ReportService {
 
     public boolean writeToCSVFile(String filePath){
         try {
-            Files.writeString(Path.of(filePath),this.reportString(),StandardCharsets.UTF_8);
-            return true;
+            //Files.writeString(Path.of(filePath),this.reportString(),StandardCharsets.UTF_8);
+            throw new IOException();
+            //return true;
         } catch (IOException e) {
             e.printStackTrace();
         }

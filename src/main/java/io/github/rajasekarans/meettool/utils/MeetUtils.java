@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MeetUtils {
-    public static List<String> cleanUp(String filePath){
+    /* public static List<String> cleanUp(String filePath){
         try {
             List<String> lines = Files.readAllLines(Path.of(filePath), StandardCharsets.UTF_8);
             List<String> c_lines = new ArrayList<>();
@@ -28,6 +28,7 @@ public class MeetUtils {
         return null;
     }
 
+    */ 
     public static List<String> cleanupString(String meetString){
         List<String> lines = Arrays.asList(meetString.split("\n"));
         List<String> c_lines = new ArrayList<>();
