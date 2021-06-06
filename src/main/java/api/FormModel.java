@@ -5,7 +5,8 @@ public class FormModel {
     private String date;
     private String hour;
     private String minitue;
-    private String upload;
+    private String map;
+    private String meet;
 
 
     public String getClassname() {
@@ -40,12 +41,21 @@ public class FormModel {
         this.minitue = minitue;
     }
 
-    public String getUpload() {
-        return this.upload;
+    public String getMeet() {
+        return this.meet;
     }
 
-    public void setUpload(String upload) {
-        this.upload = upload;
+    public void setMeet(String meet) {
+        this.meet = meet;
+    }
+
+
+    public String getMap() {
+        return this.map;
+    }
+
+    public void setMap(String map) {
+        this.map = map;
     }
 
     @Override
@@ -55,9 +65,11 @@ public class FormModel {
             ", date='" + date + "'" +
             ", hour='" + hour + "'" +
             ", minitue='" + minitue + "'" +
-            ", upload='" + upload + "'" +
+            ", map='" + map + "'" +
+            ", meet='" + meet + "'" +
             "}";
     }
+
 
 
 

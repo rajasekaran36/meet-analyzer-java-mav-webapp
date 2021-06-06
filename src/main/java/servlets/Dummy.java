@@ -27,8 +27,9 @@ public class Dummy extends HttpServlet{
         if("POST".equalsIgnoreCase(req.getMethod())){
             Gson gson = new Gson();
             FormModel formModel = gson.fromJson(req.getReader(), FormModel.class);
-            System.out.println(formModel.getUpload());
-            meetAnalyzerService =  MeetAnalyzerService.getServiceByMeetString("src/main/resources/map.csv", formModel.getUpload());
+            System.out.println(formModel.getMeet());
+            System.out.println(formModel.getMap());
+            meetAnalyzerService =  MeetAnalyzerService.getServiceByMapAndMeetString(formModel.getMap(), formModel.getMeet());
         }
 
         List<Session> sessions = null;

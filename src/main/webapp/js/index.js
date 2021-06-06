@@ -11,7 +11,7 @@ function setup() {
   document.getElementsByName("hour")[0].innerHTML = genSelectOptions(0, 12, 1);
   document.getElementsByName("miniute")[0].innerHTML = genSelectOptions(0,60,1);
 }
-
+/* 
 async function readText(event) {
   //const file = event.target.files.item(0)
   //const text = await file.text();
@@ -28,7 +28,7 @@ async function readText(event) {
   toSend.upload = await data.get("upload").text();
   console.log(toSend);
   await bodyreq(toSend);
-}
+} */
 
 function params() {
   let myParams = { name: "raja", dept: "IT" };
@@ -117,6 +117,19 @@ function displayTable(tablejson) {
   document.body.appendChild(table);
 }
 
-function process(){
-  
+async function process(){
+  let form = document.querySelector("form");
+  let data = new FormData(form);
+  for (let pair of data.entries()) {
+    console.log(pair);
+  }
+  let toSend = {};
+  toSend.classname = data.get("classname");
+  toSend.date = data.get("date");
+  toSend.hour = data.get("hour");
+  toSend.minitue = data.get("miniute");
+  toSend.map = await data.get("map").text();
+  toSend.meet = await data.get("meet").text();
+  console.log(toSend);
+  await bodyreq(toSend);
 }

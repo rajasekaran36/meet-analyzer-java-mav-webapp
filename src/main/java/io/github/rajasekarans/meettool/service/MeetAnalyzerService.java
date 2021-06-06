@@ -31,6 +31,15 @@ public class MeetAnalyzerService {
         return newService;
     }
 
+    public static MeetAnalyzerService getServiceByMapAndMeetString(String studentMapping,String meetString){
+        MeetAnalyzerService newService = new MeetAnalyzerService();
+        newService.studentMapService = new StudentMapService().getServiceUsingMapString(studentMapping);
+        newService.meetingService = new MeetingService().getServiceByMeetString(meetString);
+        newService.reportRecordService = new ReportRecordService(newService.studentMapService,newService.meetingService);
+        newService.reportService = new ReportService(newService.reportRecordService);
+        return newService;
+    }
+
     public boolean writeToCSVFile(String reportFilePath){
         return reportService.writeToCSVFile(reportFilePath);
     }
