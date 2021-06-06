@@ -8,7 +8,7 @@ import java.util.List;
 
 public class MeetUtils {
     public static List<String> cleanUp(String filePath){
-        try {
+       /*  try {
             List<String> lines = Files.readAllLines(Path.of(filePath), StandardCharsets.UTF_8);
             List<String> c_lines = new ArrayList<>();
             
@@ -24,7 +24,7 @@ public class MeetUtils {
         } 
         catch (Exception e) {
             e.printStackTrace();
-        }
+        } */
         return null;
     }
 
