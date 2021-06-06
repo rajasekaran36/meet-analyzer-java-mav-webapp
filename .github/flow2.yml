@@ -1,0 +1,20 @@
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy Stage
+      uses: fjogeleit/http-request-action@master
+      with:
+        url: 'https://meet-analyzer-java-mav-webapp.rajasekaranap.repl.co/'
+        method: 'GET'
+    timeout: # optional, default is 5000
+    # Bearer Authentication Token
+    bearerToken: # optional
+    # Custom HTTP Headers
+    customHeaders: # optional
+    # Prevent this Action to fail if the request respond without an response
+    preventFailureOnNoResponse: # optional
+    # Prevent this Action to fail if the request respond with one of the configured StatusCodes
+    ignoreStatusCodes: # optional
+    # Escape newlines in data string content
+    escapeData: # optional

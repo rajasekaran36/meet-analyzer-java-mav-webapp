@@ -13,7 +13,11 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  uses: satak/webrequest-action@master
-  with:
-    url: https://meet-analyzer-java-mav-webapp.rajasekaranap.repl.co/
-    method: GET
+  deployment:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy Stage
+      uses: fjogeleit/http-request-action@master
+      with:
+        url: 'https://meet-analyzer-java-mav-webapp.rajasekaranap.repl.co/'
+        method: 'GET'
