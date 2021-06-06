@@ -1,5 +1,11 @@
 package io.github.rajasekarans.meettool.service;
 
+import java.util.List;
+
+import com.google.gson.Gson;
+
+import io.github.rajasekarans.meettool.model.Session;
+
 public class MeetAnalyzerService {
 
     private StudentMapService studentMapService;
@@ -31,5 +37,9 @@ public class MeetAnalyzerService {
 
     public String reportString(){
         return reportService.reportString();
+    }
+
+    public List<Session> getSessions(){
+        return reportService.getSessions();
     }
 }

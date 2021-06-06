@@ -1,3 +1,5 @@
+servlets/Dummy$ReportDetails.class
+io/github/rajasekarans/meettool/model/Session.class
 io/github/rajasekarans/meettool/service/StudentMapService.class
 servlets/Analize.class
 io/github/rajasekarans/meettool/service/MeetAnalyzerService.class

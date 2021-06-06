@@ -2,12 +2,15 @@ package io.github.rajasekarans.meettool.service;
 
 import io.github.rajasekarans.meettool.model.Participation;
 import io.github.rajasekarans.meettool.model.ReportRecord;
+import io.github.rajasekarans.meettool.model.Session;
 import io.github.rajasekarans.meettool.model.Student;
 import io.github.rajasekarans.meettool.model.StudentMap;
 import io.github.rajasekarans.meettool.model.Meeting;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.google.gson.Gson;
 
 public class ReportRecordService {
 
@@ -90,4 +93,42 @@ public class ReportRecordService {
         return String.join("\n", lines);
     }
 
+    public List<Session> getSessions(){
+        Meeting meeting = meetingService.getMeeting();
+        List<Session> sessionrecords = new ArrayList<>();
+
+        for(StudentMap studentMap:studentMapService.getStudentMaps()){
+            Student student = studentMap.getStudent();
+            Session session = new Session();
+            session.setClassname(meeting.getClassName());
+            session.setDate(meeting.getDate());
+            session.setTime(meeting.getTime());
+            session.setMeetid(meeting.getMeedID());
+            session.setStudentid(String.valueOf(student.getId()));
+            session.setStudentrollno(student.getRollNo());
+            session.setStudentname(student.getName());
+
+            ReportRecord reportRecord = getReportRecord(student.getId());
+            if(reportRecord!=null){
+                Participation participation = reportRecord.getParticipation();
+                session.setGmeetname(participation.getGmeetName());
+                session.setArrivaltime(participation.getArrivalTime());
+                session.setLastseen(participation.getLastSeen());
+                session.setTotalduration(String.valueOf(reportRecord.getTotalDuration()));
+                session.setStatus(reportRecord.getStatus());
+                session.setComments(reportRecord.getComments());
+            }
+            else{
+                session.setGmeetname("");
+                session.setArrivaltime("");
+                session.setLastseen("");
+                session.setTotalduration("0");
+                session.setStatus("AB");
+                session.setComments("ABSENT");
+            }
+            sessionrecords.add(session);
+        }
+
+        return sessionrecords;
+    }
 }

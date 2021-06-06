@@ -9,6 +9,7 @@ import java.util.List;
 import io.github.rajasekarans.meettool.model.Participation;
 import io.github.rajasekarans.meettool.model.Report;
 import io.github.rajasekarans.meettool.model.ReportRecord;
+import io.github.rajasekarans.meettool.model.Session;
 import io.github.rajasekarans.meettool.model.Student;
 import io.github.rajasekarans.meettool.model.StudentMap;
 
@@ -21,6 +22,9 @@ public class ReportService {
         report = new Report(reportRecordService.getMeeting(), reportRecordService.getReportRecords());
     }
 
+    public Report getReport() {
+        return report;
+    }
     public String reportString(){
         List<String> lines = new ArrayList<>();
         
@@ -71,5 +75,9 @@ public class ReportService {
             e.printStackTrace();
         }
         return false;
+    }
+
+    public List<Session> getSessions(){
+        return reportRecordService.getSessions();
     }
 }

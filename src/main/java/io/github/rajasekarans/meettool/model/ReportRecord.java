@@ -82,7 +82,7 @@ public class ReportRecord{
                 this.status = "P";
             }
             else{
-                this.status = "P";
+                this.status = "LE";
                 this.comments = "Left Early";
             }
         }
