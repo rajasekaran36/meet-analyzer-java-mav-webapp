@@ -9,11 +9,7 @@ function genSelectOptions(from, to, step) {
 }
 function setup() {
   document.getElementsByName("hour")[0].innerHTML = genSelectOptions(0, 12, 1);
-  document.getElementsByName("miniute")[0].innerHTML = genSelectOptions(
-    0,
-    60,
-    1
-  );
+  document.getElementsByName("miniute")[0].innerHTML = genSelectOptions(0,60,1);
 }
 
 async function readText(event) {
